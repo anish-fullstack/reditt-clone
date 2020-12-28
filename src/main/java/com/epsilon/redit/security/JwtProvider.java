@@ -25,7 +25,7 @@ public class JwtProvider {
         try {
             keyStore = KeyStore.getInstance("JKS");
             InputStream resourceAsStream = getClass().getResourceAsStream("redit.jks.old");
-            keyStore.load(resourceAsStream, "epsilon@123".toCharArray());
+            keyStore.load(resourceAsStream, "password".toCharArray());
         } catch (KeyStoreException | CertificateException | NoSuchAlgorithmException | IOException e) {
             throw new SpringRedittException("Exception occurred while loading keystore");
         }
